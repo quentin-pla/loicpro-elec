@@ -1,0 +1,8 @@
+@use "variables" as variables;
+
+:export {
+    backgroundColor: variables.$background-color;
+    primaryColor: variables.$primary-color;
+    textColor: variables.$text-color;
+    greyColor: variables.$grey-color;
+}

@@ -1,0 +1,26 @@
+@use "variables";
+
+.custom-button {
+    border: 3px solid variables.$primary-color;
+    font-size: 1.2vw;
+    font-family: "semibold", sans-serif;
+    width: fit-content;
+    padding: 15px 30px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:not(.custom-button-primary) {
+        background-color: transparent;
+        color: variables.$primary-color;
+    }
+
+    &.custom-button-primary {
+        background-color: variables.$primary-color;
+        color: white;
+    }
+
+    &:hover {
+        background-color: variables.$primary-color;
+        color: white;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "short_name": "Mam'Jo",
+  "name": "Mam'Jo",
+  "icons": [
+    {
+      "src": "/assets/images/logo_mamjo.PNG",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/images/logo_mamjo.PNG",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/logo_mamjo.PNG",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

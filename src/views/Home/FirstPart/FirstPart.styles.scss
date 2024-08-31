@@ -1,0 +1,51 @@
+@use "variables";
+
+.home-view-first-part {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    .home-view-background {
+        position: absolute;
+        top: 50px;
+        left: 10%;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(1, 165, 37, 0.3) 0%, rgba(1, 165, 37, 0.3) 100%), url("../../../assets/images/home_background.jpg") lightgray 50% / cover no-repeat;
+        background-size: cover;
+        filter: blur(4px);
+        transform: scale(1.01);
+    }
+
+    .home-view-left-part {
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 90%;
+        height: 200%;
+        background-color: variables.$background-color;
+        transform: rotate(-20deg);
+        border: 10px solid variables.$primary-color;
+    }
+
+    .home-view-left-part-content {
+        position: absolute;
+        top: 50%;
+        left: 7%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        transform: translateY(-40%);
+        gap: 40px;
+
+        h3 {
+            font-size: 3vw;
+            font-family: "semibold", sans-serif;
+            line-height: 3vw;
+        }
+    }
+}
