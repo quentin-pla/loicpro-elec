@@ -21,7 +21,7 @@ const ServicesView: AppViewData = {
 
 const AboutView: AppViewData = {
     id: AppView.About,
-    path: "/about",
+    path: "/a-propos",
     element: About,
     title: "À propos",
 }

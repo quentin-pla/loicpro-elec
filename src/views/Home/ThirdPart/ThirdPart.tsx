@@ -25,6 +25,7 @@ const renderGridItem = (Icon: FluentIcon, title: string) => {
         <div className={"home-view-third-part-content-grid-item"}>
             <Icon fontSize={100} className={"primary-color"}/>
             <h4>{title}</h4>
+            <div className={"home-view-third-part-content-grid-item-rectangle"}/>
         </div>
     )
 }

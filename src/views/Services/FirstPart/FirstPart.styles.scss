@@ -1,6 +1,6 @@
 @use "variables";
 
-.home-view-first-part {
+.services-view-first-part {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,33 +9,33 @@
     overflow: hidden;
     flex-shrink: 0;
 
-    .home-view-background {
+    .services-view-background {
         position: absolute;
         top: 50px;
-        left: 10%;
+        left: 0;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(0deg, rgba(1, 165, 37, 0.3) 0%, rgba(1, 165, 37, 0.3) 100%), url("../../../assets/images/home/home_background.jpg") lightgray 50% / cover no-repeat;
+        background: linear-gradient(0deg, rgba(1, 165, 37, 0.3) 0%, rgba(1, 165, 37, 0.3) 100%), url("../../../assets/images/services/services-background.jpg") lightgray 50% / cover no-repeat;
         background-size: cover;
         filter: blur(4px);
         transform: scale(1.01);
     }
 
-    .home-view-left-part {
+    .services-view-left-part {
         position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 90%;
-        height: 200%;
+        bottom: -35%;
+        left: -22%;
+        width: 50%;
+        height: 50%;
         background-color: variables.$background-color;
-        transform: rotate(-20deg);
+        transform: rotate(-5deg) skewX(-10deg);
         border: 10px solid variables.$primary-color;
     }
 
-    .home-view-left-part-content {
+    .services-view-left-part-content {
         position: absolute;
-        top: 50%;
-        left: 7%;
+        bottom: 4%;
+        left: 9%;
         display: flex;
         flex-direction: column;
         color: white;

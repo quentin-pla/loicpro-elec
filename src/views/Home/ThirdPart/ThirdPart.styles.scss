@@ -36,6 +36,14 @@
             align-items: center;
             gap: 10px;
             text-align: center;
+
+            .home-view-third-part-content-grid-item-rectangle {
+                width: 80px;
+                height: 6px;
+                background-color: variables.$primary-color;
+                opacity: 0.3;
+                margin-top: 10px;
+            }
         }
     }
 }
