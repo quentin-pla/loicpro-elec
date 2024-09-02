@@ -1,6 +1,6 @@
 @use "variables";
 
-.services-view-first-part {
+.contact-view-first-part {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -9,19 +9,19 @@
     overflow: hidden;
     flex-shrink: 0;
 
-    .services-view-background {
+    .contact-view-background {
         position: absolute;
         top: 50px;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(0deg, rgba(1, 165, 37, 0.3) 0%, rgba(1, 165, 37, 0.3) 100%), url("../../../assets/images/services/services-background.jpg") lightgray 50% / cover no-repeat;
+        background: linear-gradient(0deg, rgba(1, 165, 37, 0.3) 0%, rgba(1, 165, 37, 0.3) 100%), url("../../../assets/images/contact/background.jpg") lightgray 50% / cover no-repeat;
         background-size: cover;
-        filter: blur(4px);
+        filter: blur(3px);
         transform: scale(1.01);
     }
 
-    .services-view-left-part {
+    .contact-view-left-part {
         position: absolute;
         bottom: -35%;
         left: -22%;
@@ -32,7 +32,7 @@
         border: 10px solid variables.$primary-color;
     }
 
-    .services-view-left-part-content {
+    .contact-view-left-part-content {
         position: absolute;
         bottom: 4%;
         left: 9%;

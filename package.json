@@ -1,13 +1,11 @@
 {
-  "homepage": "https://mamjo.fr/",
-  "name": "mamjo",
+  "homepage": "https://loicpro-elec.fr/",
+  "name": "loicpro-elec",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fluentui/react-icons": "^2.0.247",
     "react": "^16.14.0",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-bootstrap": "^2.10.4",
     "react-clear-cache": "^1.4.12",
     "react-dom": "^16.14.0",
     "react-router-dom": "^6.6.1",
@@ -15,7 +13,6 @@
     "sass": "^1.57.1"
   },
   "devDependencies": {
-    "@types/bootstrap": "^5.2.6",
     "@types/react": "^16.14.35",
     "@types/react-datepicker": "^4.8.0",
     "@types/react-dom": "^16.9.17",

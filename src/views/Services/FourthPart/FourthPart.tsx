@@ -1,5 +1,6 @@
 import "./FourthPart.styles.scss";
 import {CheckItem} from "../../../components/CheckItem/CheckItem";
+import {DeveloperBoardLightningRegular} from "@fluentui/react-icons";
 
 export const FourthPart = () => {
     return (
@@ -25,7 +26,11 @@ export const FourthPart = () => {
                         <CheckItem title={"Integration optimale au système électrique"}/>
                     </div>
                 </div>
-                <div className={"services-view-fourth-part-image"}/>
+                <div className={"services-view-fourth-part-image"}>
+                    <div className={"services-view-fourth-part-icon"}>
+                        <DeveloperBoardLightningRegular fontSize={60} color={"white"}/>
+                    </div>
+                </div>
             </div>
         </div>
     )

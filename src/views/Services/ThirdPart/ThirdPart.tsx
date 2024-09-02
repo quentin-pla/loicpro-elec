@@ -1,11 +1,16 @@
 import "./ThirdPart.styles.scss";
 import {CheckItem} from "../../../components/CheckItem/CheckItem";
+import {ToolboxRegular} from "@fluentui/react-icons";
 
 export const ThirdPart = () => {
     return (
         <div className={"services-view-third-part"}>
             <div className={"services-view-third-part-content"}>
-                <div className={"services-view-third-part-image"}/>
+                <div className={"services-view-third-part-image"}>
+                    <div className={"services-view-third-part-icon"}>
+                        <ToolboxRegular fontSize={60} color={"white"}/>
+                    </div>
+                </div>
                 <div className={"services-view-third-part-left-content"}>
                     <h2>
                         Dépannages
