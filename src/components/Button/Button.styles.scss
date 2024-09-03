@@ -2,13 +2,14 @@
 
 .custom-button {
     border: 5px solid variables.$primary-color;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     font-family: "semibold", sans-serif;
     width: fit-content;
     padding: 15px 30px;
     transition: all 0.2s ease;
     cursor: pointer;
     text-transform: uppercase;
+    flex-shrink: 0;
 
     &:not(.custom-button-primary) {
         background-color: transparent;

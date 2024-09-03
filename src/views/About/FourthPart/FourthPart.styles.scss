@@ -1,5 +1,27 @@
 @use "variables";
 
+@media screen and (max-width: 1000px) {
+    .about-view-fourth-part {
+        padding: 50px 0 !important;
+        margin-top: 0 !important;
+
+        .about-view-fourth-part-content {
+            flex-direction: column-reverse;
+
+            .about-view-fourth-part-left-content {
+                width: 100% !important;
+                max-width: calc(100% - 100px) !important;
+            }
+
+            .about-view-fourth-part-image {
+                width: 100% !important;
+                max-width: calc(100% - 200px) !important;
+                height: 300px !important;
+            }
+        }
+    }
+}
+
 .about-view-fourth-part {
     position: relative;
     display: flex;

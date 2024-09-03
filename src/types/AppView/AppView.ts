@@ -2,5 +2,6 @@ export enum AppView {
     Home = 0,
     Services = 1,
     About = 2,
-    Contact = 3
+    Contact = 3,
+    LegalInformation = 4,
 }

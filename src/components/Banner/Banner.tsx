@@ -16,7 +16,7 @@ export const Banner = () => {
             <div className={"banner-logo"}>
                 <h3>LOIC<span className={"primary-color"}>PRO</span> ELEC</h3>
             </div>
-            {Object.values(AppViews).map(view => (
+            {Object.values(AppViews).slice(0, 4).map(view => (
                 <h3
                     key={view.id}
                     className={window.location.pathname === view.path ? "banner-active-item" : ""}

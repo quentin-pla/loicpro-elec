@@ -4,6 +4,7 @@ import {Home} from "../views/Home/Home";
 import {Services} from "../views/Services/Services";
 import {About} from "../views/About/About";
 import {Contact} from "../views/Contact/Contact";
+import {LegalInformation} from "../views/LegalInformation/LegalInformation";
 
 const HomeView: AppViewData = {
     id: AppView.Home,
@@ -33,9 +34,17 @@ const ContactView: AppViewData = {
     title: "Contact",
 }
 
+const LegalInformationView: AppViewData = {
+    id: AppView.LegalInformation,
+    path: "/mentions-legales",
+    element: LegalInformation,
+    title: "Mentions légales",
+}
+
 export const AppViews: Record<AppView, AppViewData> = {
     [AppView.Home]: HomeView,
     [AppView.Services]: ServicesView,
     [AppView.About]: AboutView,
     [AppView.Contact]: ContactView,
+    [AppView.LegalInformation]: LegalInformationView,
 }

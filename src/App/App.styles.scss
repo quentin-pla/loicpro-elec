@@ -1,22 +1,10 @@
 @use "variables";
 
-@media screen and (max-width: 1200px) {
-    html, body, #root {
-        font-size: 90% !important;
-    }
-}
-
-@media screen and (max-width: 1020px) {
-    html, body, #root {
-        font-size: 80% !important;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    html, body, #root {
-        font-size: 70% !important;
-    }
-}
+//@media screen and (max-width: 1200px) {
+//    html, body, #root {
+//        font-size: 90% !important;
+//    }
+//}
 
 html, body, #root, #root {
     display: flex;
@@ -57,7 +45,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 a {
-    text-decoration: none !important
+    text-decoration: none !important;
+    cursor: pointer;
 }
 
 h2 {
@@ -68,7 +57,7 @@ h2 {
 
 h3 {
     font-size: 1.8rem;
-    line-height: 1.8rem;
+    line-height: 2.3rem;
     font-family: "semibold", sans-serif;
 }
 

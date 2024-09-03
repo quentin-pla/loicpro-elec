@@ -1,5 +1,29 @@
 @use "variables";
 
+@media screen and (max-width: 1000px) {
+    .about-view-first-part {
+        height: 30vh !important;
+        flex-direction: column;
+
+        .about-view-background {
+            top: 0 !important;
+            left: 0 !important;
+        }
+
+        .about-view-left-part {
+            display: none;
+        }
+
+        .about-view-left-part-content {
+            h3 {
+                font-size: 3rem !important;
+                line-height: 3rem !important;
+                text-shadow: 0 0 30px #000;
+            }
+        }
+    }
+}
+
 .about-view-first-part {
     position: relative;
     display: flex;

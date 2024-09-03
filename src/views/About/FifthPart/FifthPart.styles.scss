@@ -1,5 +1,11 @@
 @use "variables";
 
+@media screen and (max-width: 1000px) {
+    .about-view-fifth-part {
+        padding: 50px 50px 50px 50px !important;
+    }
+}
+
 .about-view-fifth-part {
     position: relative;
     display: flex;

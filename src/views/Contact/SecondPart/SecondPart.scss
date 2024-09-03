@@ -1,5 +1,29 @@
 @use "variables";
 
+@media screen and (max-width: 1000px) {
+    .contact-view-second-part {
+        padding: 50px 0 !important;
+
+        .contact-view-second-part-content {
+            flex-direction: column-reverse;
+            gap: 80px !important;
+
+            .contact-view-second-part-form-content {
+                padding: 0 !important;
+                width: 100% !important;
+                max-width: calc(100% - 100px) !important;
+            }
+
+            .contact-view-second-part-left-content {
+                width: 100% !important;
+                max-width: calc(100% - 300px) !important;
+                margin-left: 0 !important;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
 .contact-view-second-part {
     position: relative;
     display: flex;

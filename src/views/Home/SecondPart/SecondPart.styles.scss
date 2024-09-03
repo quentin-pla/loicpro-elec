@@ -1,21 +1,41 @@
 @use "variables";
 
+@media screen and (max-width: 1000px) {
+    .home-view-second-part {
+        padding: 50px !important;
+
+        .home-view-second-part-content {
+            width: 100%;
+            flex-direction: column;
+
+            .home-view-second-part-left-content {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .home-view-second-part-image {
+                width: 100% !important;
+                height: 400px !important;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
 .home-view-second-part {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 100vw;
-    overflow: hidden;
+    height: fit-content;
+    width: calc(100vw - 100px);
     flex-shrink: 0;
-    justify-content: center;
     align-items: center;
+    padding: 100px 50px;
 
     .home-view-second-part-content {
         display: flex;
         gap: 50px;
-        height: 100%;
-        justify-content: center;
+        height: fit-content;
         align-items: center;
 
         .home-view-second-part-left-content {
