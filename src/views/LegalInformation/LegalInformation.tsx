@@ -2,8 +2,11 @@ import React from "react";
 import {Banner} from "../../components/Banner/Banner";
 import "./LegalInformation.styles.scss";
 import {Footer} from "../../components/Footer/Footer";
+import {useScrollTop} from "../../hooks/useScrollTop";
 
 export const LegalInformation = () => {
+    useScrollTop();
+
     return (
         <div className={"legal-information-view"}>
             <Banner/>

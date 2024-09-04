@@ -6,8 +6,11 @@ import {FirstPart} from "./FirstPart/FirstPart";
 import {SecondPart} from "./SecondPart/SecondPart";
 import {ThirdPart} from "./ThirdPart/ThirdPart";
 import {FourthPart} from "./FourthPart/FourthPart";
+import {useScrollTop} from "../../hooks/useScrollTop";
 
 export const Services = () => {
+    useScrollTop();
+
     return (
         <div className={"services-view"}>
             <Banner/>

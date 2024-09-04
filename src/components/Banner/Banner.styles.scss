@@ -1,26 +1,50 @@
 @use "variables";
 
+@media screen and (max-width: 1000px) {
+    .banner {
+        .banner-logo {
+            h3 {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .banner-top {
+            justify-content: right !important;
+        }
+    }
+}
+
 .banner {
     z-index: 100;
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: column;
     background-color: variables.$background-color;
     color: white;
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    font-family: "semibold", sans-serif;
     border-bottom: 8px solid variables.$primary-color;
-    //box-shadow: 0 0 30px 30px variables.$background-color;
+    //gap: 20px;
 
-    h3 {
+    .banner-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    button {
         font-size: 1rem;
         cursor: pointer;
         transition: all .2s ease;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-family: "semibold", sans-serif;
 
         &:hover {
             color: variables.$primary-color;
@@ -42,6 +66,27 @@
 
         h3 {
             font-size: 1.3rem;
+        }
+    }
+
+    .banner-menu {
+        display: flex;
+        flex-direction: column;
+        transition: all .2s ease;
+        height: 0;
+        visibility: hidden;
+
+        &.banner-menu-open {
+            margin-top: 20px;
+            visibility: visible;
+            border-top: 1px solid variables.$primary-color;
+            padding-top: 20px;
+            height: fit-content;
+        }
+
+        button {
+            font-size: 1.5rem !important;
+            padding: 10px;
         }
     }
 }

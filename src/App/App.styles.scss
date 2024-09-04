@@ -1,21 +1,15 @@
 @use "variables";
 
-//@media screen and (max-width: 1200px) {
-//    html, body, #root {
-//        font-size: 90% !important;
-//    }
-//}
+@media screen and (max-width: 1000px) {
+    html, body, #root {
+        font-size: 70% !important;
+    }
 
-html, body, #root, #root {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    letter-spacing: 1.5px;
-}
-
-html {
-    touch-action: manipulation !important;
+    *::-webkit-scrollbar {
+        display: none;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
 
 body {
@@ -28,15 +22,22 @@ body {
 }
 
 html, body, #root {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-    font-family: 'regular', sans-serif;
-    font-weight: 400;
-    font-size: 100%;
     scroll-behavior: smooth;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    max-width: 100%;
+    overflow: hidden;
+}
+
+div,
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    outline: none !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -51,7 +52,7 @@ a {
 
 h2 {
     font-size: 2.2rem;
-    line-height: 2.2rem;
+    line-height: 2.8rem;
     font-family: "medium", sans-serif;
 }
 
@@ -68,13 +69,15 @@ h4 {
 }
 
 h5 {
-    font-size: 1rem;
-    line-height: 1.3rem;
-    font-family: "regular", sans-serif;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-family: "thin", sans-serif;
 }
 
 p {
     color: variables.$text-color;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 .fill-absolute {

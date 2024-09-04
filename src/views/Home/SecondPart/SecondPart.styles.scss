@@ -2,11 +2,12 @@
 
 @media screen and (max-width: 1000px) {
     .home-view-second-part {
-        padding: 50px !important;
+        padding: 25px !important;
 
         .home-view-second-part-content {
             width: 100%;
             flex-direction: column;
+            gap: 30px !important;
 
             .home-view-second-part-left-content {
                 width: 100% !important;
@@ -17,6 +18,7 @@
                 width: 100% !important;
                 height: 400px !important;
                 margin-bottom: 50px;
+                max-width: calc(100vw - 50px) !important;
             }
         }
     }
@@ -27,7 +29,7 @@
     display: flex;
     flex-direction: column;
     height: fit-content;
-    width: calc(100vw - 100px);
+    width: calc(100vw - 50px);
     flex-shrink: 0;
     align-items: center;
     padding: 100px 50px;

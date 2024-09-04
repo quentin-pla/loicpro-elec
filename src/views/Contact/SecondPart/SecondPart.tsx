@@ -1,11 +1,61 @@
 import "./SecondPart.scss";
-//@ts-ignore
-import variables from "../../../variables.module.scss";
 import {ClockRegular} from "@fluentui/react-icons";
-import React from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {Button} from "../../../components/Button/Button";
+import emailjs from "@emailjs/browser";
+
+type FormData = {
+    name: string,
+    phone: string,
+    email: string,
+    notes: string,
+}
 
 export const SecondPart = () => {
+    const [formData, setFormData] = useState<FormData>({name: "", email: "", notes: "", phone: ""});
+    const [checkboxChecked, setCheckboxChecked] = useState<boolean>(false);
+
+    useEffect(() => {
+        emailjs.init({
+            publicKey: "QyLRfE9bPyBiTjslu",
+            limitRate: {
+                throttle: 5000
+            }
+        });
+    }, []);
+
+    const handleUpdateFormField = useCallback((field: keyof FormData) => (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+        const value = e.target.value || "";
+        setFormData(prev => ({...prev, [field]: value}));
+    }, []);
+
+    const handleToggleCheckbox = useCallback(() => {
+        setCheckboxChecked(prev => !prev);
+    }, []);
+
+    const handleSendForm = async () => {
+        await emailjs.send("service_h1ov7fb", "request", {
+            request_name: formData.name,
+            request_phone: formData.phone,
+            request_mail: formData.email,
+            request_notes: formData.notes,
+        }).then(
+            (response) => {
+                alert("Votre message a bien été envoyé !");
+                setFormData({name: "", email: "", notes: "", phone: ""});
+            },
+            (error) => {
+                alert("Votre message n'a pas pu être envoyé, veuillez réessayer plus tard.");
+            },
+        );
+    }
+
+    const isNameValid = formData.name.length > 3;
+    const isEmailValid = validateEmail(formData.email);
+    const isPhoneValid = validatePhoneNumber(formData.phone);
+    const isNotesValid = formData.notes.length > 10;
+    const isFormValid = checkboxChecked && isNameValid && isEmailValid && isPhoneValid && isNotesValid;
+
     return (
         <div className={"contact-view-second-part"}>
             <div className={"contact-view-second-part-content"}>
@@ -22,21 +72,56 @@ export const SecondPart = () => {
                 </div>
                 <div className={"contact-view-second-part-form-content"}>
                     <h2>Faisons connaissance</h2>
-                    <input placeholder={"Nom et prénom"}/>
-                    <input placeholder={"Téléphone"}/>
-                    <input placeholder={"Adresse mail"}/>
-                    <textarea placeholder={"Notes"}/>
+                    <input
+                        className={(!formData.name.length || isNameValid) ? "" : "field-error"}
+                        placeholder={"Nom et prénom"}
+                        value={formData.name}
+                        onChange={handleUpdateFormField("name")}
+                    />
+                    <input
+                        className={(!formData.phone.length || isPhoneValid) ? "" : "field-error"}
+                        placeholder={"Téléphone"}
+                        inputMode={"tel"}
+                        value={formData.phone}
+                        onChange={handleUpdateFormField("phone")}
+                    />
+                    <input
+                        className={(!formData.email.length || isEmailValid) ? "" : "field-error"}
+                        placeholder={"Adresse mail"}
+                        inputMode={"email"}
+                        value={formData.email}
+                        onChange={handleUpdateFormField("email")}
+                    />
+                    <textarea
+                        className={(!formData.notes.length || isNotesValid) ? "" : "field-error"}
+                        placeholder={"Notes"}
+                        value={formData.notes}
+                        onChange={handleUpdateFormField("notes")}
+                    />
                     <div className={"contact-view-second-part-form-content-checkbox-container"}>
-                        <input type="checkbox" title={"Test"}/>
-                        <label>
-                            J'ai lu et j'accepte les mentions légales, notamment la mention relative à la protection des données personnelles.
-                        </label>
+                        <input type="checkbox" title={"Test"} onClick={handleToggleCheckbox}/>
+                        <p>
+                            J'ai lu et j'accepte les mentions légales, notamment la mention relative à la protection des
+                            données personnelles.
+                        </p>
                     </div>
                     <div className={"contact-view-second-part-form-content-button-container"}>
-                        <Button title={"Envoyer"} primary/>
+                        <Button title={"Envoyer"} primary disabled={!isFormValid} onClick={handleSendForm}/>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+
+///////////////////////////////////////////////////// PURE METHODS /////////////////////////////////////////////////////
+
+const validateEmail = (email: string): boolean => {
+    const emailRegex: RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+};
+
+const validatePhoneNumber = (phoneNumber: string): boolean => {
+    const phoneRegex: RegExp = /^(?:(?:\+|00)33|0)[1-9](?:[ .-]?[0-9]{2}){4}$/;
+    return phoneRegex.test(phoneNumber);
+};

@@ -25,4 +25,11 @@
         background-color: variables.$primary-color;
         color: white;
     }
+
+    &:disabled {
+        background-color: #dddddd;
+        border: 5px solid #dddddd;
+        color: white;
+        cursor: not-allowed;
+    }
 }

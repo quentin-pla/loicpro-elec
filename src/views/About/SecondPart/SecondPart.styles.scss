@@ -2,8 +2,8 @@
 
 @media screen and (max-width: 1000px) {
     .about-view-second-part {
-        padding: 50px 0 !important;
-        margin-bottom: 50px;
+        padding: 30px 0 !important;
+        margin-bottom: 30px;
 
         .about-view-second-part-content {
             flex-direction: column;
@@ -11,12 +11,20 @@
 
             .about-view-second-part-left-content {
                 width: 100% !important;
-                max-width: calc(100% - 100px) !important;
+                max-width: calc(100% - 50px) !important;
+
+                .about-view-second-part-left-content-grid {
+                    margin-right: 0 !important;
+
+                    .about-view-second-part-left-content-grid-item {
+                        border-right: none !important;
+                    }
+                }
             }
 
             .about-view-second-part-image {
                 width: 100% !important;
-                max-width: calc(100% - 200px) !important;
+                max-width: calc(100% - 50px) !important;
                 height: 400px !important;
             }
         }

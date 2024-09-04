@@ -5,6 +5,7 @@ export const Button = (props: {
     onClick?: () => void,
     primary?: boolean,
     color?: string,
+    disabled?: boolean,
 }) => {
 
     const className = [
@@ -13,7 +14,7 @@ export const Button = (props: {
     ].filter(Boolean).join(" ");
 
     return (
-        <button className={className} onClick={props.onClick}>
+        <button disabled={props.disabled} className={className} onClick={props.onClick}>
             <span style={{color: props.color}}>{props.title}</span>
         </button>
     )

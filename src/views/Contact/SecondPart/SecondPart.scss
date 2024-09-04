@@ -2,21 +2,22 @@
 
 @media screen and (max-width: 1000px) {
     .contact-view-second-part {
-        padding: 50px 0 !important;
+        padding: 30px 0 !important;
 
         .contact-view-second-part-content {
             flex-direction: column-reverse;
-            gap: 80px !important;
+            gap: 50px !important;
 
             .contact-view-second-part-form-content {
                 padding: 0 !important;
                 width: 100% !important;
-                max-width: calc(100% - 100px) !important;
+                max-width: calc(100% - 50px) !important;
+                gap: 20px !important;
             }
 
             .contact-view-second-part-left-content {
                 width: 100% !important;
-                max-width: calc(100% - 300px) !important;
+                max-width: calc(100% - 150px) !important;
                 margin-left: 0 !important;
                 margin-bottom: 50px;
             }
@@ -59,21 +60,21 @@
             }
 
             h4 {
-                font-size: 2vw;
+                font-size: 2rem;
                 font-family: "semibold", sans-serif;
-                line-height: 3vw;
+                line-height: 2rem;
             }
 
             h5 {
-                font-size: 1.5vw;
+                font-size: 1.5rem;
                 font-family: "semibold", sans-serif;
-                line-height: 2vw;
+                line-height: 2rem;
             }
 
             h6 {
-                font-size: 1.2vw;
+                font-size: 1.2rem;
                 font-family: "regular", sans-serif;
-                line-height: 2vw;
+                line-height: 2rem;
             }
 
         }
@@ -89,6 +90,8 @@
             input, textarea {
                 background-color: variables.$background-color;
                 color: white;
+                border: transparent;
+                outline: none;
                 border-bottom: 6px solid variables.$primary-color;
                 padding: 20px;
                 font-size: 1.2rem;
@@ -96,6 +99,10 @@
 
                 &::placeholder {
                     color: darkgray;
+                }
+
+                &.field-error {
+                    border-bottom: 6px solid red;
                 }
             }
 

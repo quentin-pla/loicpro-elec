@@ -2,21 +2,26 @@
 
 @media screen and (max-width: 1000px) {
     .services-view-third-part {
-        padding: 50px 0 !important;
+        padding: 25px 0 !important;
+        margin-bottom: 40px;
 
         .services-view-third-part-content {
             flex-direction: column-reverse;
-            gap: 50px !important;
+            gap: 30px !important;
 
             .services-view-third-part-left-content {
                 width: 100% !important;
-                max-width: calc(100% - 100px) !important;
+                max-width: calc(100% - 50px) !important;
             }
 
             .services-view-third-part-image {
                 width: 100% !important;
-                max-width: calc(100% - 200px) !important;
+                max-width: calc(100% - 50px) !important;
                 height: 400px !important;
+
+                .services-view-third-part-icon {
+                    display: none !important;
+                }
             }
         }
     }
