@@ -4,6 +4,8 @@ import {ReactElement} from "react";
 import {ReactComponent as FacebookSvg} from "./facebook.svg";
 //@ts-ignore
 import {ReactComponent as InstagramSvg} from "./instagram.svg";
+//@ts-ignore
+import {ReactComponent as LinkedinSvg} from "./linkedin.svg";
 
 export type IIcon = React.FunctionComponent<React.SVGProps<SVGSVGElement> & { title?: string }>;
 export type IconProps = React.SVGProps<SVGSVGElement> & { title?: string };
@@ -18,3 +20,4 @@ const renderSvgIcon = (Icon: IIcon): IconFunc => (props: IconProps) => {
 
 export const FacebookIcon: IconFunc = renderSvgIcon(FacebookSvg);
 export const InstagramIcon: IconFunc = renderSvgIcon(InstagramSvg);
+export const LinkedinIcon: IconFunc = renderSvgIcon(LinkedinSvg);

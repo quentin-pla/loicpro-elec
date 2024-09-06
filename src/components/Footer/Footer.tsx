@@ -3,7 +3,7 @@ import React from "react";
 //@ts-ignore
 import variables from "../../variables.module.scss";
 import {ClockRegular} from "@fluentui/react-icons";
-import {FacebookIcon, InstagramIcon} from "../../assets/icons";
+import {FacebookIcon, InstagramIcon, LinkedinIcon} from "../../assets/icons";
 import {useNavigate} from "react-router-dom";
 import {AppView} from "../../types/AppView/AppView";
 import {AppViews} from "../../const/AppViews";
@@ -43,10 +43,21 @@ export const Footer = (props: {
                     </a>
                 </div>
                 <div>
-                    <FacebookIcon width={"40px"} height={"40px"}/>
-                    <InstagramIcon width={"40px"} height={"40px"}/>
+                    <button onClick={handleOpenLink("https://www.facebook.com/share/e7kcChs5Q2v7tRAB")}>
+                        <FacebookIcon width={"40px"} height={"40px"}/>
+                    </button>
+                    <button onClick={handleOpenLink("https://www.instagram.com/loicpro_elec")}>
+                        <InstagramIcon width={"40px"} height={"40px"}/>
+                    </button>
+                    <button onClick={handleOpenLink("https://www.linkedin.com/groups/13079137")}>
+                        <LinkedinIcon width={"40px"} height={"40px"}/>
+                    </button>
                 </div>
             </div>
         </div>
     )
+}
+
+const handleOpenLink = (url: string) => () => {
+    window.open(url, "_blank");
 }

@@ -155,5 +155,13 @@
             justify-content: right;
             align-items: center;
         }
+
+        button {
+            border: 0;
+            outline: 0;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+        }
     }
 }
