@@ -70,7 +70,7 @@ export const SecondPart = () => {
                         <h5>Heures d'ouverture</h5>
                         <ClockRegular fontSize={30}/>
                     </div>
-                    <h5 className={"primary-color"}>Du lundi au Dimanche De 8h à 20h</h5>
+                    <h5 className={"primary-color"}>Du Lundi au Samedi De 8h à 20h</h5>
                 </div>
                 <div className={"contact-view-second-part-form-content"}>
                     <h2>Faisons connaissance</h2>

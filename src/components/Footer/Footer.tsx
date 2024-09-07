@@ -29,7 +29,7 @@ export const Footer = (props: {
                             <h5>Heures d'ouverture</h5>
                             <ClockRegular fontSize={30}/>
                         </div>
-                        <h6>Du lundi au Dimanche De 8 h à 20 h</h6>
+                        <h6>Du Lundi au Samedi De 8 h à 20 h</h6>
                     </div>
                 </div>
             }
