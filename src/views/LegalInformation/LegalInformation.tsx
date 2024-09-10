@@ -7,6 +7,7 @@ import {useScrollTop} from "../../hooks/useScrollTop";
 export const LegalInformation = () => {
     useScrollTop();
 
+    const phoneNumber = ["06", "51", "54", "40", "71"].join(" ");
     return (
         <div className={"legal-information-view"}>
             <Banner/>
@@ -25,13 +26,13 @@ export const LegalInformation = () => {
                     La Société LOICPRO ELEC est domiciliée : 1 rue mistral, Gardanne, 13120, France.
                 </p>
                 <p>
-                    Raison sociale :
+                    Raison sociale : LOICPRO ELEC
                 </p>
                 <p>
-                    Adresse postale :
+                    Coordonnées de contact : {phoneNumber}
                 </p>
                 <p>
-                    Coordonnées de contact :
+                    Hébergeur : Github, Adresse : 37 QUAI DU PRESIDENT ROOSEVELT 92130 ISSY-LES-MOULINEAUX
                 </p>
                 <h4>2 – Accès et disponibilité du Site</h4>
                 <p>
@@ -95,22 +96,7 @@ export const LegalInformation = () => {
                 </p>
                 <h4>5 – Cookies</h4>
                 <p>
-                    LOICPRO ELEC peut être amenée à utiliser le système des « cookies ».
-                    Le cookie ne permet pas de vous identifier nominativement. En revanche, il enregistre des
-                    informations
-                    relatives à la navigation de votre ordinateur sur notre site web (Les pages que vous avez
-                    consultées, la
-                    date et l’heure de la consultation, etc.).
-                    Cela nous permettra de savoir quelles sont les parties de notre site web qui vous intéressent le
-                    plus.
-                </p>
-                <p>
-                    Il vous est possible de détecter l’existence de ces « cookies » et, le cas échéant, de les
-                    supprimer.
-                </p>
-                <p>
-                    Il vous est possible de vous opposer à l’enregistrement de cookies en désactivant cette fonction de
-                    votre navigateur dans les préférences de celui-ci.
+                    LOICPRO ELEC n'utilise pas de cookies pour collecter des informations personnelles.
                 </p>
                 <h4>6 – Propriété intellectuelle</h4>
                 <p>
