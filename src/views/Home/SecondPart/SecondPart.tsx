@@ -11,8 +11,7 @@ export const SecondPart = () => {
                     </h3>
                     <p>
                         Pour vos projets de construction ou de rénovation, LOICPRO ELEC met à votre disposition son
-                        efficacité et sa réactivité, prêtes à intervenir au alentour
-                        d’Aix-en-Provence.
+                        efficacité et sa réactivité, prêtes à intervenir aux alentours d’Aix-en-Provence.
                     </p>
                     <h3>Ce qui fait notre différence</h3>
 
