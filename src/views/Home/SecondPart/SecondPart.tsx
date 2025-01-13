@@ -16,7 +16,6 @@ export const SecondPart = () => {
                     <h3>Ce qui fait notre différence</h3>
 
                     <div className={"home-view-second-part-left-content-grid"}>
-                        <CheckItem title={"Entreprise familiale"}/>
                         <CheckItem title={"Accompagnement de l’étude à la réalisation"}/>
                         <CheckItem title={"+ 30 ans d’expérience"}/>
                         <CheckItem title={"Respect des normes NF C 15-100"}/>

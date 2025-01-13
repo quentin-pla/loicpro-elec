@@ -7,14 +7,14 @@ export const SecondPart = () => {
             <div className={"about-view-second-part-content"}>
                 <div className={"about-view-second-part-left-content"}>
                     <h2>
-                        Notre entreprise familiale
+                        Notre entreprise
                     </h2>
                     <p>
                         LOICPRO ELEC intervient auprès des particuliers et professionnels du bâtiment, que ce soit en
                         neuf ou en rénovation, principalement dans les environs d’Aix-en-Provence.
                         <br/>
                         <br/>
-                        Entreprise familiale, nous sommes passionnés par notre métier et nous apportons une attention
+                        Nous sommes passionnés par notre métier et nous apportons une attention
                         particulière à la qualité des prestations et à la satisfaction des clients.
                     </p>
                     <div className={"about-view-second-part-left-content-grid"}>

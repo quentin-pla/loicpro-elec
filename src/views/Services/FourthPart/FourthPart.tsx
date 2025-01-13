@@ -20,7 +20,7 @@ export const FourthPart = () => {
                     <div className={"services-view-fourth-part-left-content-grid"}>
                         <CheckItem title={"Installation équipements électriques"}/>
                         <CheckItem title={"Assurance du bon fonctionnement"}/>
-                        <CheckItem title={"Intégration d’appareils électrinoques"}/>
+                        <CheckItem title={"Intégration d’appareils électroniques"}/>
                         <CheckItem title={"Assurance des équipements"}/>
                         <CheckItem title={"Intervention rapide et experte"}/>
                         <CheckItem title={"Integration optimale au système électrique"}/>

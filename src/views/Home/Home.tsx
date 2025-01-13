@@ -6,6 +6,7 @@ import {ThirdPart} from "./ThirdPart/ThirdPart";
 import {Footer} from "../../components/Footer/Footer";
 import {Banner} from "../../components/Banner/Banner";
 import {useScrollTop} from "../../hooks/useScrollTop";
+import {SeoKeywords} from "../../components/SeoKeywords/SeoKeywords";
 
 export const Home = () => {
     useScrollTop();
@@ -17,6 +18,7 @@ export const Home = () => {
             <SecondPart/>
             <ThirdPart/>
             <Footer/>
+            <SeoKeywords/>
         </div>
     );
 };
