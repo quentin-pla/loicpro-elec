@@ -17,7 +17,6 @@ export const SecondPart = () => {
 
                     <div className={"home-view-second-part-left-content-grid"}>
                         <CheckItem title={"Accompagnement de l’étude à la réalisation"}/>
-                        <CheckItem title={"+ 30 ans d’expérience"}/>
                         <CheckItem title={"Respect des normes NF C 15-100"}/>
                         <CheckItem title={"Techniciens qualifiés"}/>
                         <CheckItem title={"Respect des délais de livraison"}/>

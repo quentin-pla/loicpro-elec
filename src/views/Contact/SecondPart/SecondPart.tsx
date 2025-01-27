@@ -56,7 +56,7 @@ export const SecondPart = () => {
     const isNotesValid = formData.notes.length > 10;
     const isFormValid = checkboxChecked && isNameValid && isEmailValid && isPhoneValid && isNotesValid;
 
-    const phoneNumber = ["06", "51", "54", "40", "71"].join(" ");
+    const phoneNumber = ["06", "51", "54", "40", "71"];
 
     return (
         <div className={"contact-view-second-part"}>
@@ -65,7 +65,11 @@ export const SecondPart = () => {
                     <p>
                         LOICPRO ELEC est à votre disposition pour vous conseiller et étudier vos projets.
                     </p>
-                    <h4>{phoneNumber}</h4>
+                    <h4>
+                        <a style={{color: "white"}}
+                           href={"tel:+33" + phoneNumber.join("").slice(1)}>{phoneNumber.join(" ")}
+                        </a>
+                    </h4>
                     <div className={"flex-center"} style={{gap: "8px"}}>
                         <h5>Heures d'ouverture</h5>
                         <ClockRegular fontSize={30}/>

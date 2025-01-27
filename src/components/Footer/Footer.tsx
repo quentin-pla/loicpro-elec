@@ -12,7 +12,7 @@ export const Footer = (props: {
     hideTopPart?: boolean
 }) => {
     const navigate = useNavigate();
-    const phoneNumber = ["06","51","54","40","71"].join(" ");
+    const phoneNumber = ["06", "51", "54", "40", "71"];
     return (
         <div className={"footer"}>
             {!props.hideTopPart &&
@@ -24,7 +24,11 @@ export const Footer = (props: {
                             LOIC<span style={{color: variables.primaryColor}}>PRO</span> ELEC
                         </h4>
                         <div className={"rectangle-decoration"}/>
-                        <h4>{phoneNumber}</h4>
+                        <h4>
+                            <a style={{color: "white"}}
+                               href={"tel:+33" + phoneNumber.join("").slice(1)}>{phoneNumber.join(" ")}
+                            </a>
+                        </h4>
                         <div className={"flex-center"} style={{gap: "8px"}}>
                             <h5>Heures d'ouverture</h5>
                             <ClockRegular fontSize={30}/>
